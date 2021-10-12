@@ -15,7 +15,7 @@
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <th>Movie Title</th>
+      <th><%=link_to 'Movie Title',movies_path(:sort=>'title')%></th>
       <th>Rating</th>
       <th>Release Date</th>
       <th>More Info</th>
@@ -25,7 +25,7 @@
     <% @movies.each do |movie| %>
       <tr>
         <td>
-          <%= movie.title %>
+          <%= movie.title%>
         </td>
         <td>
           <%= movie.rating %>
